@@ -1,0 +1,152 @@
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+// Redefined Gray colors for theme
+$gray-darker:            #232735;
+$gray-dark: #3a3f51;
+$gray:                   #dde6e9;
+$gray-light:             #e4eaec;
+$gray-lighter:           #edf1f2;
+
+// Classic brand colors
+
+$brand-primary:          #1b72e2;
+$brand-sub:              #5d9cec;
+$brand-third:            #69f0ae;
+$brand-grey:             #e1e7f1;
+$brand-success:          #27c24c;
+$brand-info:             #23b7e5;
+$brand-warning:          #ff902b;
+$brand-danger:           #f05050;
+
+// New brand colors
+
+$brand-inverse:          #131e26;
+$brand-green:            #37bc9b;
+$brand-m-green:          #69f0ae;
+$brand-pink:             #f532e5;
+$brand-purple:           #7266ba;
+$brand-dark:             #3a3f51;
+$brand-yellow:           #fad732;
+
+// Text helpers
+
+.text-white         { color: #fff; }
+.text-inverse       { color: $brand-inverse; }
+.text-pink          { color: $brand-pink; }
+.text-purple        { color: $brand-purple; }
+.text-dark          { color: $brand-dark; }
+.text-green         { color: $brand-green; }
+.text-yellow        { color: $brand-yellow; }
+.text-gray-darker   { color: $gray-darker; }
+.text-gray-dark     { color: $gray-dark; }
+.text-gray-d1       { color: #a2a6a4; }
+.text-gray          { color: $gray; }
+.text-gray-light    { color: $gray-light; }
+.text-gray-lighter  { color: $gray-lighter; }
+.text-inherit       { color: inherit; }
+.text-danger        { color: #D95C5C; }
+
+// Utilities classes to simplify
+// components constructions
+// ------------------------------
+
+$margin-base: 10px;
+$margin-sm:   5px;
+$margin-lg:   15px;
+$margin-xl:   30px;
+
+$padding-xl:   30px;
+$padding-lg:   15px;
+$padding-base: 10px;
+$padding-sm:   5px;
+
+// Margins
+// --------------------
+
+.m0 { margin: 0 !important; }
+.ml0 { margin-left: 0 !important; }
+.mr0 { margin-right: 0 !important; }
+.mt0 { margin-top: 0 !important; }
+.mb0 { margin-bottom: 0 !important; }
+
+.m  { margin: $margin-base !important; }
+.ml { margin-left: $margin-base !important; }
+.mr { margin-right: $margin-base !important; }
+.mt { margin-top: $margin-base !important; }
+.mb { margin-bottom: $margin-base !important; }
+
+.m-sm  { margin: $margin-sm !important; }
+.ml-sm { margin-left: $margin-sm !important; }
+.mr-sm { margin-right: $margin-sm !important; }
+.mt-sm { margin-top: $margin-sm !important; }
+.mb-sm { margin-bottom: $margin-sm !important; }
+
+.m-lg  { margin: $margin-lg !important; }
+.ml-lg { margin-left: $margin-lg !important; }
+.mr-lg { margin-right: $margin-lg !important; }
+.mt-lg { margin-top: $margin-lg !important; }
+.mb-lg { margin-bottom: $margin-lg !important; }
+
+.m-xl  { margin: $margin-xl !important; }
+.ml-xl { margin-left: $margin-xl !important; }
+.mr-xl { margin-right: $margin-xl !important; }
+.mt-xl { margin-top: $margin-xl !important; }
+.mb-xl { margin-bottom: $margin-xl !important; }
+
+// Paddings
+// --------------------
+
+.p0 { padding: 0 !important; }
+.pl0 { padding-left: 0 !important; }
+.pr0 { padding-right: 0 !important; }
+.pt0 { padding-top: 0 !important; }
+.pb0 { padding-bottom: 0 !important; }
+.pv0 { @extend .pt0; @extend .pb0; }
+.ph0 { @extend .pl0; @extend .pr0; }
+
+.p  { padding: $padding-base !important; }
+.pl { padding-left: $padding-base !important; }
+.pr { padding-right: $padding-base !important; }
+.pt { padding-top: $padding-base !important; }
+.pb { padding-bottom: $padding-base !important; }
+
+.p-sm  { padding: $padding-sm !important; }
+.pl-sm { padding-left: $padding-sm !important; }
+.pr-sm { padding-right: $padding-sm !important; }
+.pt-sm { padding-top: $padding-sm !important; }
+.pb-sm { padding-bottom: $padding-sm !important; }
+
+.p-lg  { padding: $padding-lg !important; }
+.pl-lg { padding-left: $padding-lg !important; }
+.pr-lg { padding-right: $padding-lg !important; }
+.pt-lg { padding-top: $padding-lg !important; }
+.pb-lg { padding-bottom: $padding-lg !important; }
+
+.p-20 {padding: 20px !important}
+.pt-20 {padding-top: 20px !important}
+.pr-20 {padding-right: 20px !important}
+.pb-20 {padding-bottom: 20px !important}
+.pl-20 {padding-left: 20px !important}
+
+.p-xl  { padding: $padding-xl !important; }
+.pl-xl { padding-left: $padding-xl !important; }
+.pr-xl { padding-right: $padding-xl !important; }
+.pt-xl { padding-top: $padding-xl !important; }
+.pb-xl { padding-bottom: $padding-xl !important; }
+
+// Text others
+
+.text-nowrap { white-space: nowrap; }
+.text-thin   { font-weight: 100 !important; }
+.text-normal { font-weight: normal !important; }
+.text-bold   { font-weight: bold !important; }
+.text-center   { text-align: center !important; }
+
+.block-center { margin: 0 auto; }
+
+.btn-block {
+  display: block;
+  width: 100%;
+}

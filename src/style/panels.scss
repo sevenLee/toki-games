@@ -1,0 +1,265 @@
+/* ========================================================================
+     Component: panels
+ ========================================================================== */
+
+@import "bootstrap/bootstrap/_mixins.scss";
+// Classic brand colors
+
+$brand-primary:          #1b72e2;
+$brand-sub:              #5d9cec;
+$brand-third:            #69f0ae;
+$brand-grey:             #e1e7f1;
+$brand-success:          #27c24c;
+$brand-info:             #23b7e5;
+$brand-warning:          #ff902b;
+$brand-danger:           #f05050;
+// New brand colors
+
+$brand-inverse:          #131e26;
+$brand-green:            #37bc9b;
+$brand-m-green:          #69f0ae;
+$brand-pink:             #f532e5;
+$brand-purple:           #7266ba;
+$brand-dark:             #3a3f51;
+$brand-yellow:           #fad732;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+
+/* ========================================================================
+     Component: media-queries
+ ========================================================================== */
+
+// Taken from bootstrap variables
+// to match all components media queries
+
+$mq-desktop-lg:                           $screen-lg-desktop; // Usually 1200px
+$mq-desktop:                              $screen-desktop;    // Usually 992px
+$mq-tablet:                               $screen-sm-min;     // Usually 768px
+$mq-mobile:                               $screen-phone;      // Usually 480px
+
+// Inverse version media queries (for use with max-width)
+// Some components needs to be strictly defined only for mobile
+
+$mq-up-to-desktop-lg:                           ($screen-lg-desktop - 1); // Usually 1199px
+$mq-up-to-desktop:                              ($screen-desktop - 1);    // Usually 991px
+$mq-up-to-tablet:                               ($screen-sm-min - 1);     // Usually 767px
+$mq-up-to-mobile:                               ($screen-phone - 1);      // Usually 479px
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   16px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  20px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+$line-height-large:         1.33;
+$line-height-small:         1.5;
+
+$border-radius-base:        4px;
+$border-radius-large:       6px;
+$border-radius-small:       3px;
+
+//== Panels
+//
+//##
+$panel-global-border:         #cfdbe2;
+
+$panel-bg:                    #fff;
+$panel-body-padding:          15px;
+$panel-heading-padding:       10px 15px;
+$panel-footer-padding:        $panel-heading-padding;
+$panel-border-radius:         $border-radius-base;
+
+
+$login-panel-bg:                    #ffffff;
+$login-panel-start: #ffffff;
+$login-panel-end: #e1e7f1;
+
+.login-panel {
+  width: 320px;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: $mq-tablet) {
+  .login-panel {
+    width: 400px;
+    margin-top: 100px;
+  }
+
+  .panel-heading {
+    padding: 10px 30px;
+  }
+
+  .panel-body {
+    padding: 15px 30px;
+  }
+}
+
+.panel {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+
+  .table {
+    margin-bottom: 0;
+    border: 0;
+  }
+  &.panel-transparent {
+    border: 0;
+    background-color: transparent;
+
+    .panel-heading,
+    .panel-body {
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.panel-flat {
+  margin: 0 !important;
+  border: 0;
+  @include gradient-vertical($login-panel-start, $login-panel-end);
+}
+
+.panel-group {
+  .panel-flat {
+    box-shadow: 0 0 0 #000;
+    &:first-child {
+      border-radius: 4px 4px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+}
+
+.panel-heading {
+  > a[data-tool] {
+    display: inline-block;
+    color: #fff;
+    width: 2em;
+    text-align: center;
+  }
+
+  .panel-default & {
+    > a[data-tool] {
+      color: #c1c2c3;
+    }
+  }
+  
+  // right floated labels adjust position
+  > .label.pull-right {
+    margin-top: 3px;
+    + .label.pull-right {
+      margin-right: 10px;
+    }
+  }
+  &.panel-heading-collapsed {
+    border-radius: $panel-border-radius - 1;
+  }
+}
+
+.panel-footer {
+  .pagination {
+    margin: 0;
+  }
+  .radial-bar {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Active class for collapse elements 
+.panel-heading-active {
+  background-color: $brand-success !important;
+  font-weight: bold;
+  font-size: 16px;
+  > a {
+    padding: 15px 0;  // Adding padding here improves mobile touch
+    color: #fff !important;
+    @include transition(padding .5s ease);
+  }
+  + .panel-collapse:after {
+    content: "";
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    height: 0;
+    border-bottom: 1px solid #e1e2e3;
+  }
+}
+
+.panel-inverse {
+  @include panel-variant($panel-global-border, #fff, $brand-inverse, $brand-inverse);
+}
+
+.panel-green {
+  @include panel-variant($panel-global-border, #fff, $brand-green, $brand-green);
+}
+
+.panel-pink {
+  @include panel-variant($panel-global-border, #fff, $brand-pink, $brand-pink);
+}
+
+.panel-purple {
+  @include panel-variant($panel-global-border, #fff, $brand-purple, $brand-purple);
+}
+
+.panel-dark {
+  @include panel-variant($panel-global-border, #fff, $brand-dark, $brand-dark);
+}
+
+.panel-dark-light {
+  @include panel-variant($panel-global-border, #fff, $panel-global-border, $panel-global-border);
+}

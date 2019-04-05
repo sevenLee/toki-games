@@ -1,0 +1,16 @@
+# Log
+logs
+*.logs
+npm-debug.log*
+yarn-error.log
+
+*.gz
+*.tar
+
+# Dependency
+node_modules
+.idea/
+.DS_Store
+dist/
+.settings
+.project
