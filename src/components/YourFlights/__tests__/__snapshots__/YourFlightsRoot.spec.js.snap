@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<YourFlightsRootContainer /> should set form submit success with redux-form/SET_SUBMIT_SUCCEEDED 1`] = `
+Array [
+  Object {
+    "meta": Object {
+      "form": "flightForm",
+    },
+    "payload": Object {
+      "name": "flightType",
+      "type": "Field",
+    },
+    "type": "@@redux-form/REGISTER_FIELD",
+  },
+  Object {
+    "meta": Object {
+      "form": "flightForm",
+    },
+    "payload": Object {
+      "name": "departure",
+      "type": "Field",
+    },
+    "type": "@@redux-form/REGISTER_FIELD",
+  },
+  Object {
+    "meta": Object {
+      "form": "flightForm",
+    },
+    "payload": Object {
+      "name": "arrival",
+      "type": "Field",
+    },
+    "type": "@@redux-form/REGISTER_FIELD",
+  },
+  Object {
+    "meta": Object {
+      "form": "flightForm",
+    },
+    "payload": Object {
+      "name": "departureTime",
+      "type": "Field",
+    },
+    "type": "@@redux-form/REGISTER_FIELD",
+  },
+  Object {
+    "meta": Object {
+      "form": "flightForm",
+    },
+    "payload": Object {
+      "name": "arrivalTime",
+      "type": "Field",
+    },
+    "type": "@@redux-form/REGISTER_FIELD",
+  },
+  Object {
+    "meta": Object {
+      "form": "flightForm",
+    },
+    "payload": Object {
+      "error": undefined,
+      "syncErrors": Object {
+        "arrival": "Value is required",
+        "departure": "Value is required",
+      },
+    },
+    "type": "@@redux-form/UPDATE_SYNC_ERRORS",
+  },
+  Object {
+    "type": "FETCH_CHEAP_FLIGHTS_ACTION",
+  },
+  Object {
+    "type": "FETCH_BUSINESS_FLIGHTS_ACTION",
+  },
+  Object {
+    "meta": Object {
+      "field": "departure",
+      "form": "flightForm",
+      "persistentSubmitErrors": false,
+      "touch": false,
+    },
+    "payload": "Departure",
+    "type": "@@redux-form/CHANGE",
+  },
+  Object {
+    "meta": Object {
+      "field": "arrival",
+      "form": "flightForm",
+      "persistentSubmitErrors": false,
+      "touch": false,
+    },
+    "payload": "Arrival",
+    "type": "@@redux-form/CHANGE",
+  },
+  Object {
+    "meta": Object {
+      "fields": Array [
+        "flightType",
+        "departure",
+        "arrival",
+        "departureTime",
+        "arrivalTime",
+      ],
+      "form": "flightForm",
+    },
+    "type": "@@redux-form/TOUCH",
+  },
+  Object {
+    "type": "ADD_CHEAP_FLIGHT_ACTION",
+  },
+  Object {
+    "error": false,
+    "meta": Object {
+      "fields": Array [],
+      "form": "flightForm",
+    },
+    "type": "@@redux-form/SET_SUBMIT_SUCCEEDED",
+  },
+]
+`;

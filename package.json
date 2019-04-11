@@ -70,7 +70,8 @@
     "npm-run-all": "^4.1.2",
     "raww": "^1.0.3",
     "react-datepicker": "^2.3.0",
-    "redux-form": "7.3"
+    "redux-form": "7.3",
+    "redux-mock-store": "^1.5.3"
   },
   "jest": {
     "setupFiles": [
