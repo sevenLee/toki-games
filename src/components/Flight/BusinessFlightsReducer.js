@@ -63,6 +63,8 @@ export const getBusinessActivePage = state => state.activePage
 export const getBusinessListSize = state => state.list.length
 export const getDisplayedBusinessFlights = (state, sorting) => {
     let displayedBusinessFlights = state.list
+    // debugger
+    if(!displayedBusinessFlights || displayedBusinessFlights.length === 0) return []
     if (sorting !== '') {
         displayedBusinessFlights = sortingTable(state.list, sorting, state.descending)
     }

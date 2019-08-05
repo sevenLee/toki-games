@@ -24,7 +24,7 @@ export function* fetchBusinessFlightsHandler(action) {
         const result = yield call(api, 'business');
         yield put({type: BusinessFlightTypes.FETCH_BUSINESS_FLIGHTS_SUCCESS, payload: result});
     } catch (e) {
-        console.log(e)
+        console.log('#### fetchBusinessFlightsHandler:', e)
     }
 }
 

@@ -92,6 +92,8 @@ export const getCheapFilterWords = state => state.filterWords
 
 export const getDisplayedCheapFlights = (state, sorting) => {
     let displayedCheapFlights = state.list
+    if(!displayedCheapFlights || displayedCheapFlights.length === 0) return []
+
     if (sorting !== '') {
         displayedCheapFlights = sortingTable(state.list, sorting, state.descending)
     }
